@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
-    "build-container": "npm run build && docker build -t minikube-fullstack-server .",
+    "build-container": "npm run build && docker build -t ogcamplin/minikube-fullstack-server .",
     "deploy-container": "docker-compose up",
     "deploy": "npm run build && git commit -a -m deployment && git push heroku master",
     "dev": "webpack-dev-server --open",

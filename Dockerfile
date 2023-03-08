@@ -5,7 +5,7 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY dist ./
+COPY dist ./dist/
 COPY src/server ./src/server/
 COPY index.html ./
 COPY .babelrc ./
