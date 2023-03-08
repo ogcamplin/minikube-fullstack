@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
+    "build-container": "npm run build && docker build -t minikube-fullstack-server .",
+    "deploy-container": "docker-compose up",
     "deploy": "npm run build && git commit -a -m deployment && git push heroku master",
     "dev": "webpack-dev-server --open",
     "server": "cross-env NODE_ENV=production babel-node src/server",
@@ -42,7 +44,7 @@
     "webpack": "^5.75.0"
   },
   "engines": {
-    "node": "9.2.0"
+    "node": "16"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
